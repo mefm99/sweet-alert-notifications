@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FBa48vt91kG3RZUcJHT4jZz8NPvkdMi09xfDdsnrCYoFFH/xvAg7Oj+w7HfPY5BgoY6NOH3Mzw5jv7icC57MkA==",
+  "success": true,
+  "projectFilePath": "G:\\Practice\\Web ASP\\SweetAlertNotifications\\SweetAlertNotifications\\SweetAlertNotifications.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mohamed Eid\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

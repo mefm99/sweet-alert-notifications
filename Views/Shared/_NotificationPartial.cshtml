@@ -1,0 +1,44 @@
+﻿<script>
+    var msg = @(TempData["Message"]!=null? Html.Raw(TempData["Message"]) : Html.Raw("undefined"));
+    if (msg) {
+        if (msg.type == "Basic") {
+            swal.fire({
+                text: msg.message
+            });
+        }
+        else if (msg.type == "TitleWithTextUnder") {
+            swal.fire({
+                title: msg.title,
+                text: msg.message,
+                icon: msg.icon
+            });
+        }
+        else if (msg.type == "ModalWithFooter") {
+            swal.fire({
+                title: msg.title,
+                text: msg.message,
+                icon: msg.icon,
+                footer: msg.footer
+            });
+        }
+        else if (msg.type == "ConfirmDialogWithConfirmButton") {
+            swal.fire({
+                title: msg.title,
+                text: msg.message,
+                icon: msg.icon,
+                showCancelButton: msg.showCancelButton,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: msg.confirmButtonText
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        msg.titleConfirm,
+                        msg.messageConfirm,
+                        'success'
+                    )
+                }
+            });
+        }
+    }
+</script>
